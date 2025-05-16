@@ -10,4 +10,10 @@ class ProjectManagementApplicationTests {
 	void contextLoads() {
 	}
 
+	 @Test
+    void mainRunsWithoutError() {
+        // Call your Spring Boot entry point; if it throws, the test fails.
+        ProjectManagementApplication.main(new String[] {});
+    }
+
 }
