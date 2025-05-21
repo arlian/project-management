@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.example.project_management.exception.InvalidOperationException;
+import com.example.project_management.exception.ResourceNotFound;
 import com.example.project_management.model.Project;
 import com.example.project_management.model.User;
 import com.example.project_management.payload.request.CreateProjectRequest;
@@ -45,5 +46,10 @@ public class ProjectService {
     @Transactional(readOnly = true)
     public Page<Project> listProjects(Pageable pageable) {
         return projectRepository.findAll(pageable);
+    }
+
+    @Transactional
+    public Project getProject(Long id){
+        return projectRepository.findById(id).orElseThrow(() -> new ResourceNotFound("Project", id));
     }
 }
