@@ -1,7 +1,12 @@
-package com.example.project_management.payload;
+package com.example.project_management.payload.response;
 
-import lombok.*;      // make sure you have these imports
-import java.time.Instant;
+import java.time.Instant;      // make sure you have these imports
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter
 @Setter

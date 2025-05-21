@@ -2,12 +2,13 @@ package com.example.project_management.service;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import lombok.RequiredArgsConstructor;
 
 import com.example.project_management.exception.UsernameAlreadyExistsException;
 import com.example.project_management.model.User;
-import com.example.project_management.payload.SignUpRequest;
+import com.example.project_management.payload.request.SignUpRequest;
 import com.example.project_management.repository.UserRepository;
+
+import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor

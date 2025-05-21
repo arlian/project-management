@@ -1,7 +1,9 @@
-package com.example.project_management.payload;
+package com.example.project_management.payload.request;
 
 import jakarta.validation.constraints.NotBlank;
-import lombok.*;
+import lombok.Builder;
+import lombok.ToString;
+import lombok.Value;
 
 @Value
 @Builder
